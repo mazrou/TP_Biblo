@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SeanceListFragment"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:text="@string/book_list"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_weight="1"
+            android:name="com.khaldi.biblo.ui.BookListFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/seance_list_item" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="10dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:maxWidth="240dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.045" />
+
+                <TextView
+                    android:id="@+id/utility_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/textColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_txt_view"
+                    />
+
+                <TextView
+                    android:id="@+id/volume_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:maxWidth="255dp"
+                    android:text="@string/volume_horaire"
+                    android:textColor="@color/textColor"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/utility_txt_view"
+                    app:layout_constraintTop_toBottomOf="@+id/utility_txt_view" />
+
+                <TextView
+                    android:id="@+id/teacher_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:maxWidth="255dp"
+                    android:text="@string/volume_horaire"
+                    android:textColor="@color/textColor"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/utility_txt_view"
+                    app:layout_constraintTop_toBottomOf="@+id/volume_txt_view" />
+                <TextView
+                    android:id="@+id/grade_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:maxWidth="255dp"
+                    android:text="@string/volume_horaire"
+                    android:textColor="@color/textColor"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/utility_txt_view"
+                    app:layout_constraintTop_toBottomOf="@+id/teacher_txt_view" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -7,20 +7,33 @@
 
     <fragment
         android:id="@+id/bookListFragment"
-        android:name="com.khaldi.biblo.ui.BookListFragment"
+        android:name="com.khaldi.biblo.ui.SeanceListFragment"
         android:label="fragment_book_list"
-        tools:layout="@layout/fragment_book_list" >
+        tools:layout="@layout/fragment_seance_list" >
         <action
-            android:id="@+id/to_detail"
-            app:destination="@id/bookDetailsFragment"
+            android:id="@+id/to_module_detail"
+            app:destination="@id/moduleDetailsFragment"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
-        android:id="@+id/bookDetailsFragment"
-        android:name="com.khaldi.biblo.ui.BookDetailsFragment"
+        android:id="@+id/moduleDetailsFragment"
+        android:name="com.khaldi.biblo.ui.ModuleDetailsFragment"
         android:label="fragment_book_details"
-        tools:layout="@layout/fragment_book_details" />
+        tools:layout="@layout/fragment_module_details" >
+        <action
+            android:id="@+id/to_teacher"
+            app:destination="@id/teacherFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="com.khaldi.biblo.ui.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" />
 </navigation>
